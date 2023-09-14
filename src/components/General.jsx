@@ -18,7 +18,7 @@ export default function General() {
 
   return (
     <form>
-      <label>First Name: </label>
+      <label>First Name</label>
       <input
         name='firstName'
         type='text'
@@ -26,7 +26,7 @@ export default function General() {
         value={state.firstName}
         onChange={handleInputChange}
       />
-      <label>Last Name: </label>
+      <label>Last Name</label>
       <input
         name='lastName'
         type='text'
@@ -34,7 +34,7 @@ export default function General() {
         value={state.lastName}
         onChange={handleInputChange}
       />
-      <label>Email: </label>
+      <label>Email</label>
       <input
         name='email'
         type='email'
@@ -42,7 +42,7 @@ export default function General() {
         value={state.email}
         onChange={handleInputChange}
       />
-      <label>Phone: </label>
+      <label>Phone</label>
       <input
         name='phone'
         type='tel'
