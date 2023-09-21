@@ -149,5 +149,45 @@ main {
 }
 
 .work-item {
-  border: solid 1px black;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin: 4px;
+}
+
+.work-item-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.duration {
+  display: flex;
+  grid-column: 1;
+}
+
+.start-date,
+.end-date {
+  padding: 0px 4px;
+}
+
+.work-details-container {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.work-name-location-container {
+  display: flex;
+  font-style: italic;
+}
+
+.work-item-location {
+  margin-left: 4px;
+}
+
+.work-item-responsibilities {
+  padding-left: 8px;
+  list-style-type: disc;
+  list-style-position: inside;
+  list-style-image: none;
 }
