@@ -1,8 +1,8 @@
-import General from './components/General';
-import Work from './components/Work';
-import Education from './components/Education';
-import ResumeOutput from './components/ResumeOutput';
-import './styles/styles.css';
+import General from './General';
+import Work from './Work';
+import Education from './Education';
+import ResumeOutput from './ResumeOutput';
+import '../styles/styles.css';
 import { useState } from 'react';
 
 function App() {
