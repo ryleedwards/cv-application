@@ -1,0 +1,153 @@
+/* VARIABLES */
+:root {
+  --warning-color: #856404;
+  --warning-background: #fff3cd;
+}
+
+/* BEGIN BOILERPLATE */
+*,
+*::before,
+*::after {
+  /* Reset box model */
+  box-sizing: border-box;
+}
+
+/* Image behavior */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Reset list styling */
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+menu,
+ol,
+ul {
+  padding-left: 0;
+}
+article ol,
+article ul {
+  list-style-position: inside;
+}
+
+/* Enhance link underlines */
+a {
+  /* Places underlines below the descenders */
+  text-underline-position: under;
+
+  /* Sets the thickness as a percentage of the font size */
+  text-decoration-thickness: 8;
+}
+
+/* Change root font size */
+html {
+  font-size: 62.5%;
+}
+
+/* Disable the text inflation algorithm */
+html {
+  -webkit-text-size-adjust: none; /* for iOS Safari */
+  text-size-adjust: none; /* for other mobile browsers */
+}
+
+/* Enable smooth scrolling */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Provide interactive elements with cursor */
+label,
+button,
+select,
+summary,
+[type='radio'],
+[type='submit'],
+[type='checkbox'] {
+  cursor: pointer;
+}
+
+/* Change focus behavior */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+/* END BOILERPLATE */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forms-container {
+}
+
+.resume-container {
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-row-gap: 10px;
+  padding: 16px;
+  border: 1px white solid;
+  border-radius: 8px;
+}
+
+.form > label {
+  justify-self: end;
+  margin-right: 4px;
+}
+
+.resume-container {
+}
+
+.personal-info-container {
+  display: grid;
+  grid-template-rows: 2rem repeat(auto-fit, 1rem);
+  gap: 4px;
+  padding: 8px;
+}
+
+.personal-info-container > .full-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.personal-info-container > * > .label {
+  font-weight: bold;
+}
+
+.personal-info-container > div {
+  display: flex;
+  gap: 4px;
+}
+
+.work-history-container {
+  padding: 8px;
+}
+
+.work-history-title {
+  font-size: 1.25rem;
+  padding: 8px 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 4px;
+}
+
+.work-item {
+  border: solid 1px black;
+}
