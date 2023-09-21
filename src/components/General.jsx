@@ -1,20 +1,4 @@
-import { useState } from 'react';
-
-export default function General() {
-  const [state, setState] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-  });
-
-  const handleInputChange = (e) => {
-    const changedInput = e.target.name;
-    setState((previousState) => {
-      return { ...previousState, [changedInput]: e.target.value };
-    });
-  };
-
+export default function General({ generalInfo, handleGeneralInputChange }) {
   return (
     <>
       <h3>About You</h3>
@@ -24,32 +8,32 @@ export default function General() {
           name='firstName'
           type='text'
           className='firstName'
-          value={state.firstName}
-          onChange={handleInputChange}
+          value={generalInfo.firstName}
+          onChange={handleGeneralInputChange}
         />
         <label>Last Name</label>
         <input
           name='lastName'
           type='text'
           className='lastName'
-          value={state.lastName}
-          onChange={handleInputChange}
+          value={generalInfo.lastName}
+          onChange={handleGeneralInputChange}
         />
         <label>Email</label>
         <input
           name='email'
           type='email'
           className='email'
-          value={state.email}
-          onChange={handleInputChange}
+          value={generalInfo.email}
+          onChange={handleGeneralInputChange}
         />
         <label>Phone</label>
         <input
           name='phone'
           type='tel'
           className='phone'
-          value={state.phone}
-          onChange={handleInputChange}
+          value={generalInfo.phone}
+          onChange={handleGeneralInputChange}
         />
       </form>
     </>
