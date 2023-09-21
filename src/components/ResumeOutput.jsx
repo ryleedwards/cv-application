@@ -1,15 +1,17 @@
-export default function ResumeOutput() {
+export default function ResumeOutput({ generalInfo }) {
   return (
     <div className='resume-container'>
       <div className='personal-info-container'>
-        <p className='full-name'>John Smith</p>
+        <p className='full-name'>
+          {generalInfo.firstName} {generalInfo.lastName}
+        </p>
         <div>
           <p className='label email-label'>E-mail </p>
-          <p className='email'>jsmith@gmail.com</p>
+          <p className='email'>{generalInfo.email}</p>
         </div>
         <div>
           <p className='label phone-label'>Phone </p>
-          <p className='phone'>(512) 867-5309</p>
+          <p className='phone'>{generalInfo.phone}</p>
         </div>
       </div>
       <div className='work-history-container'>
