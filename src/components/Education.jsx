@@ -13,9 +13,12 @@ export default function Education() {
   });
 
   return (
-    <form>
-      <label>School Name</label>
-      <input name='schoolName' type='text' />
-    </form>
+    <>
+      <h3>Education</h3>
+      <form>
+        <label>School Name</label>
+        <input name='schoolName' type='text' />
+      </form>
+    </>
   );
 }
