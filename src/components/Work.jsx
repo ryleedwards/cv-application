@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
-export default function Work({ workItem, handleWorkItemInputChange }) {
+export default function Work({
+  workItem,
+  handleWorkItemInputChange,
+  handleEmploymentSubmitClick,
+}) {
   const [isWorkFormVisible, setIsWorkFormVisible] = useState(false);
 
   const handleAddEmploymentClick = () => {
@@ -56,6 +60,12 @@ export default function Work({ workItem, handleWorkItemInputChange }) {
             value={workItem.description}
             onChange={handleWorkItemInputChange}
           />
+          <button
+            className='btn work-form-submit'
+            onClick={handleEmploymentSubmitClick}
+          >
+            Submit
+          </button>
         </form>
       ) : (
         <button
